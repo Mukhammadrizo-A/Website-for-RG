@@ -563,7 +563,7 @@ if password == st.secrets["password"]:
 
 
 
-    elif menu2 != "Выберите раздел":
+    elif menu2 != "Выберите раздел...":
         st.write("Раздел не найден")
 
     else:

@@ -224,6 +224,7 @@ post12 = """
 
 ❯❯ Беседа игроков сервера: vk.cc/crVP5e"""
 
+img4 = 'true_false.jpg'
 post13 = """
 Доброго времени суток, уважаемые игроки сервера × 🍒CHERRY🍒 ×.
 
@@ -460,15 +461,36 @@ if password == st.secrets["password"]:
             st.code(post9, language='text')
 
         with st.expander("Шаблон для будни"):
-                st.code(post10, language='text')
+            st.code(post10, language='text')
 
         with st.expander("Шаблон для пасхалка"):
-                st.code(post11, language='text')
+            st.code(post11, language='text')
 
         with st.expander("Шаблон для фактов"):
-                st.code(post12, language='text')
+            st.code(post12, language='text')
 
         with st.expander("Шаблон для правильно / неправильно"):
+            st.image(img4, use_container_width=True)
+
+            col5, col6, col7 = st.columns((1, 2, 1))
+
+            try:
+                    with open(img4, "rb") as file:
+                        local_bytes = file.read()
+
+                    with col6:
+                        st.download_button(
+                            label="Скачать изображения",
+                            data=local_bytes,
+                            file_name="Миф или Правда.jpg",
+                            mime="image/jpeg",
+                            use_container_width=True,
+                            key="download_4"
+                        )
+            except FileNotFoundError:
+                    st.error(f"Файл {img4} не найден в папке с проектом!")
+
+            st.markdown("---")
             st.code(post13, language='text')
 
     # elif menu2 == "5 - Почётные редакторы":

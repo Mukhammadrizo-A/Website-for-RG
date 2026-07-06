@@ -485,7 +485,7 @@ if password == st.secrets["password"]:
                             file_name="Миф или Правда.jpg",
                             mime="image/jpeg",
                             use_container_width=True,
-                            key="download_4"
+                            key="download_5"
                         )
             except FileNotFoundError:
                     st.error(f"Файл {img4} не найден в папке с проектом!")

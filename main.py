@@ -471,7 +471,7 @@ if password == st.secrets["password"]:
         with st.expander("Шаблон для фактов"):
             st.code(post12, language='text')
 
-        with st.expander("Шаблон для миф/правда"):
+        with st.expander("Шаблон для миф и правда"):
             st.image(img4, use_container_width=True)
 
             col5, col6, col7 = st.columns((1, 2, 1))
